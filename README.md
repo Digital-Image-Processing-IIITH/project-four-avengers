@@ -8,9 +8,14 @@ Team Members are:
 - Abhinav Navnit
 
 ## Dependencies 
-cv2 - install using `pip install opencv-contrib-python` \
-numpy - install using `pip install numpy` \
-playsound - install using `pip install playsound`
+### Linux
+
+- PySynth- `git clone https://github.com/mdoege/PySynth.git`\
+Enter the directory (cd PySynth) and run
+`python3 setup.py install`
+- cv2 - install using `pip install opencv-contrib-python` 
+- numpy - install using `pip install numpy` 
+- playsound - install using `pip install playsound`
 
 ## How to run
 
