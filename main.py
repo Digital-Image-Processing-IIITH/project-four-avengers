@@ -61,7 +61,7 @@ def imgsegments(inv):
     onlynotes=255-onlynotes
     return staves,lines,onlynotes,inv
 img = cv2.imread('mary.jpg',0)
-inv=binarize(img)
+inv,th=binarize(img)
 staves,lines,onlynotes,inv=imgsegments(inv)
 def detectrest(crop_img,staff):    
     vertical_img = np.copy(crop_img)
@@ -112,7 +112,9 @@ def quarternote(crop_img):
     return im2
 
 i=0
-result = cv2.cvtColor(img,cv2.COLOR_GRAY2RGB)
+result = cv2.cvtColor(th,cv2.COLOR_GRAY2RGB)
+
+#mapping 
 while(i<len(lines)-1):
     if i==0:
         rest=detectrest(onlynotes[lines[i]:lines[i+1],:],1)
