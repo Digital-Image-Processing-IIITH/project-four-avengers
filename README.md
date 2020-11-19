@@ -20,7 +20,9 @@ Enter the directory (cd PySynth) and run
 ## How to run
 
 `python3 main.py`
+Incase main.py doesnt work please use jupyter notebook
 ## Deliverables
 - Documents file with Final evaluation presentation and Mid evaluation presentation
 - main.py source file
-- otj_input.jpg used music sheet
+- mary.jpg used music sheet
+- Slides https://docs.google.com/presentation/d/1OscHOf_DDlHBFRzxMXgojpcTpxBjodFDfRT8W4xsacI/edit?usp=sharing
