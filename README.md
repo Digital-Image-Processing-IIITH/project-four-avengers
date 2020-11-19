@@ -14,3 +14,9 @@ numpy - install using `pip install numpy` \
 playsound - install using `pip install playsound`
 
 ## How to run
+
+
+## Deliverables
+- Documents file with Final evaluation presentation and Mid evaluation presentation
+- main.py source file
+- otj_input.jpg used music sheet
