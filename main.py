@@ -11,6 +11,8 @@ def binarize(img):
     #Image Inversion
     inv=255-th
     return inv
+#image segmentation
+
 def imgsegments(inv):
     kernel = np.ones((1,50),np.uint8)
     erosion = cv2.erode(inv,kernel,iterations = 1)
@@ -63,6 +65,8 @@ def imgsegments(inv):
 img = cv2.imread('mary.jpg',0)
 inv,th=binarize(img)
 staves,lines,onlynotes,inv=imgsegments(inv)
+
+#rest detection
 def detectrest(crop_img,staff):    
     vertical_img = np.copy(crop_img)
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5,2))
@@ -96,6 +100,7 @@ def detectrest(crop_img,staff):
     else:
         result[:,:]=0
     return result
+#halfnote detection 
 def halfnote(crop_img):
     im=crop_img
     im2=cv2.morphologyEx(im, cv2.MORPH_CLOSE, disk(3.5))
@@ -106,6 +111,7 @@ def halfnote(crop_img):
     im2=cv2.morphologyEx(im2, cv2.MORPH_DILATE, disk(5))
     
     return im2
+#quarternote detection
 def quarternote(crop_img):
     im=crop_img
     im2=cv2.morphologyEx(im, cv2.MORPH_OPEN, disk(10))
@@ -114,7 +120,7 @@ def quarternote(crop_img):
 i=0
 result = cv2.cvtColor(th,cv2.COLOR_GRAY2RGB)
 
-#mapping 
+#mapping with colors for individual notes
 while(i<len(lines)-1):
     if i==0:
         rest=detectrest(onlynotes[lines[i]:lines[i+1],:],1)
