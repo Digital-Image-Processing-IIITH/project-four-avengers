@@ -20,6 +20,7 @@ Enter the directory (cd PySynth) and run
 ## How to run
 
 `python3 main.py`
+Incase main.py doesnt work please use jupyter notebook
 ## Deliverables
 - Documents file with Final evaluation presentation and Mid evaluation presentation
 - main.py source file
