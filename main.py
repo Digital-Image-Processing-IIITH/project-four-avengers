@@ -1,6 +1,5 @@
 import cv2
 import matplotlib.pyplot as plt
-%matplotlib inline
 import numpy as np
 import scipy.ndimage.morphology as morphology
 from skimage.morphology import disk
