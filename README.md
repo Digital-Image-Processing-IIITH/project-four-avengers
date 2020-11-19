@@ -8,7 +8,6 @@ Team Members are:
 - Abhinav Navnit
 
 ## Dependencies 
-pysynth - install using `pip install pysynth`   \
 cv2 - install using `pip install opencv-contrib-python` \
 numpy - install using `pip install numpy` \
 playsound - install using `pip install playsound`
